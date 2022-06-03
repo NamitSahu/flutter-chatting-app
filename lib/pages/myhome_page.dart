@@ -20,6 +20,20 @@ class _MyHomePageState extends State<MyHomePage> {
         automaticallyImplyLeading: false,
         title: const Text("Chatting App"),
         centerTitle: true,
+        actions: [
+          Builder(
+            builder: (context) {
+              return IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const LoginPage();
+                    }));
+                  },
+                  icon: const Icon(Icons.logout));
+            },
+          ),
+        ],
       ),
     );
   }
