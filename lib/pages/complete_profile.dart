@@ -43,7 +43,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
 
     if (croppedImage != null) {
       setState(() {
-        imageFile = croppedImage as File?;
+        imageFile = File(cropImage.path);
       });
     }
   }
